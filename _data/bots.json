@@ -1,0 +1,19 @@
+{
+  "updated_at": null,
+  "bots": {
+    "tixal": {
+      "name": "Tixal",
+      "description": "Ticket management system. Panels, private ticket channels, claim workflows, staff statistics, ratings, blacklists, notes, and transcripts.",
+      "invite": "",
+      "docs": "/docs/tixal/",
+      "privacy": "/privacy/tixal/"
+    },
+    "setuper": {
+      "name": "Setuper",
+      "description": "Server administration toolkit. Bulk channel and role management, layout templates, snapshots, and permission presets.",
+      "invite": "",
+      "docs": "/docs/setuper/",
+      "privacy": "/privacy/setuper/"
+    }
+  }
+}
