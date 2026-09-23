@@ -1,0 +1,20 @@
+{
+  "id": "setuper",
+  "name": "Setuper",
+  "status": "unknown",
+  "version": "1.0.0",
+  "uptime_seconds": 0,
+  "last_heartbeat": null,
+  "last_restart": null,
+  "latency_ms": null,
+  "guilds": 0,
+  "users": 0,
+  "commands_registered": 0,
+  "memory_mb": null,
+  "shard": { "id": 0, "count": 1 },
+  "checks": [
+    { "name": "Gateway",        "status": "unknown", "detail": "Awaiting heartbeat" },
+    { "name": "Command API",    "status": "unknown", "detail": "Awaiting heartbeat" },
+    { "name": "Snapshot Store", "status": "unknown", "detail": "Awaiting heartbeat" }
+  ]
+}
