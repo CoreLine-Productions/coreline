@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tixal · Status · CoreLine Productions</title>
+<meta name="description" content="Live operational status for Tixal, the ticket management bot by CoreLine Productions.">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coreline/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/coreline/">
+      <span class="brand-mark">CL</span>
+      <span class="brand-text">
+        <span class="brand-title">CoreLine</span>
+        <span class="brand-sub">Productions</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Tixal — Service status</h2>
+      <p class="section-desc" id="status-updated">Loading…</p>
+    </div>
+
+    <div id="status-root" data-bot-id="tixal"></div>
+
+    <div class="card-grid" style="margin-top:32px">
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Documentation</h3>
+        </div>
+        <p class="card-desc">Command reference, panel setup, and integration notes for Tixal.</p>
+        <div class="card-actions">
+          <a href="/coreline/docs/tixal/">Open docs</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Privacy</h3>
+        </div>
+        <p class="card-desc">What Tixal stores, why, and how to request deletion.</p>
+        <div class="card-actions">
+          <a href="/coreline/privacy/tixal/">Read policy</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="text-faint" style="font-size:13px;margin-top:24px">
+      Tixal writes a heartbeat to this repository on a fixed interval. This page refreshes every 60 seconds.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CoreLine Productions</span>
+    <nav class="footer-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://github.com/CoreLine-Productions" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/coreline/assets/status.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('status-updated');
+    if (!el) return;
+    const tick = () => {
+      el.textContent = 'Updated ' + new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    };
+    tick();
+    setInterval(tick, 60000);
+  });
+</script>
+
+</body>
+</html>
