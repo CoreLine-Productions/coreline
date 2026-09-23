@@ -1,61 +1,57 @@
-<div align="center">
-
 # CoreLine Productions
 
-Tools and infrastructure for Discord communities.
+Public hub for the Discord bots we build and run. Documentation, live status, privacy policies, and terms of service all live here, deployed straight from `main` via GitHub Pages.
 
-[Live site](https://coreline-productions.github.io/coreline/) · [Status](https://coreline-productions.github.io/coreline/status/) · [Support](https://discord.com/invite/vEcVsGmmBn)
-
-</div>
+**Live site** · https://coreline-productions.github.io/coreline/
 
 ---
-
-## Overview
-
-CoreLine Productions builds and maintains Discord bots for server operators. This repository hosts the public documentation, live status, privacy policies, and terms of service for every bot we run.
-
-Everything is deployed directly from `main` via GitHub Pages. No build step. No backend.
 
 ## Bots
 
 ### Tixal
 
-Ticket management system. Panels, private ticket channels, claim workflows, staff statistics, ratings, blacklists, notes, and transcripts.
+Ticket management for Discord. Private ticket channels, claim workflows, transcripts, staff statistics, ratings, blacklists, and internal notes.
 
-[Documentation](https://coreline-productions.github.io/coreline/docs/tixal/) · [Status](https://coreline-productions.github.io/coreline/bots/tixal/) · [Privacy](https://coreline-productions.github.io/coreline/privacy/tixal/)
+- Documentation — https://coreline-productions.github.io/coreline/docs/tixal/
+- Status — https://coreline-productions.github.io/coreline/bots/tixal/
+- Privacy — https://coreline-productions.github.io/coreline/privacy/tixal/
 
 ### Setuper
 
 Server administration toolkit. Bulk channel and role management, layout templates, snapshots, and permission presets.
 
-[Documentation](https://coreline-productions.github.io/coreline/docs/setuper/) · [Status](https://coreline-productions.github.io/coreline/bots/setuper/) · [Privacy](https://coreline-productions.github.io/coreline/privacy/setuper/)
+- Documentation — https://coreline-productions.github.io/coreline/docs/setuper/
+- Status — https://coreline-productions.github.io/coreline/bots/setuper/
+- Privacy — https://coreline-productions.github.io/coreline/privacy/setuper/
+
+---
 
 ## Status
 
-Each bot publishes a heartbeat to this repository on a fixed interval. Status pages read that data directly.
+Each bot writes a heartbeat to this repository on a fixed interval. The status pages read that data directly.
 
-| Page | Scope |
-|---|---|
-| [Global status](https://coreline-productions.github.io/coreline/status/) | All services |
-| [Tixal status](https://coreline-productions.github.io/coreline/bots/tixal/) | Gateway, command API, data store, transcripts |
-| [Setuper status](https://coreline-productions.github.io/coreline/bots/setuper/) | Gateway, command API, snapshot store |
+- Global — https://coreline-productions.github.io/coreline/status/
+- Tixal — https://coreline-productions.github.io/coreline/bots/tixal/
+- Setuper — https://coreline-productions.github.io/coreline/bots/setuper/
+
+---
 
 ## Legal
 
-- [Terms of Service](https://coreline-productions.github.io/coreline/terms/)
-- [Privacy Policies](https://coreline-productions.github.io/coreline/privacy/)
-  - [Tixal](https://coreline-productions.github.io/coreline/privacy/tixal/)
-  - [Setuper](https://coreline-productions.github.io/coreline/privacy/setuper/)
+- Terms of Service — https://coreline-productions.github.io/coreline/terms/
+- Privacy Policies — https://coreline-productions.github.io/coreline/privacy/
+  - Tixal — https://coreline-productions.github.io/coreline/privacy/tixal/
+  - Setuper — https://coreline-productions.github.io/coreline/privacy/setuper/
+
+---
 
 ## Contact
 
-- **Email** — hadtoberxr@gmail.com
-- **Support** — [discord.gg/vEcVsGmmBn](https://discord.com/invite/vEcVsGmmBn)
+- Email — hadtoberxr@gmail.com
+- Support server — https://discord.com/invite/vEcVsGmmBn
 
 Data access and deletion requests are actioned within seven days.
 
 ---
 
-<div align="center">
-<sub>© CoreLine Productions</sub>
-</div>
+© CoreLine Productions
