@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy · CoreLine Productions</title>
+<meta name="description" content="Privacy policies for every CoreLine Productions bot. What each bot stores, why, and how to remove it.">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coreline/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/coreline/">
+      <span class="brand-mark">CL</span>
+      <span class="brand-text">
+        <span class="brand-title">CoreLine</span>
+        <span class="brand-sub">Productions</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/" class="active">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Privacy policies</h2>
+      <p class="section-desc">Each CoreLine bot ships with its own policy. Every policy lists exactly what that bot stores, why it stores it, how long it is retained, and how to have it removed.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Tixal</h3>
+        </div>
+        <p class="card-desc">Ticket management system. Stores ticket metadata, staff statistics, ratings, blacklists, notes, and panel configuration. Does not store general message content outside of transcripts generated on close.</p>
+        <div class="card-actions">
+          <a href="/coreline/privacy/tixal/">Read policy</a>
+          <a href="/coreline/docs/tixal/">Docs</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Setuper</h3>
+        </div>
+        <p class="card-desc">Server administration toolkit. Stores snapshots, creation batches, layout exports, permission templates, and per-guild configuration. Does not store message content at any point.</p>
+        <div class="card-actions">
+          <a href="/coreline/privacy/setuper/">Read policy</a>
+          <a href="/coreline/docs/setuper/">Docs</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Common questions</h2>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Where is data stored?</h3>
+        </div>
+        <p class="card-desc">On the bot host, in local JSON files. No external database, no cloud service, no third-party system. Transcripts are uploaded to Discord as attachments and are not retained on the host.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">How do I request deletion?</h3>
+        </div>
+        <p class="card-desc">Email <a href="mailto:hadtoberxr@gmail.com">hadtoberxr@gmail.com</a> or open a thread in the support server. Requests are actioned within seven days. Server admins can also delete most data directly from the bot's own menus.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Is message content stored?</h3>
+        </div>
+        <p class="card-desc">No. Tixal reads messages inside a ticket channel only at the moment the ticket is closed, to build a transcript. Setuper never reads message content at all. Neither bot requests the MessageContent intent.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Do you share data with third parties?</h3>
+        </div>
+        <p class="card-desc">No. Both bots communicate only with the Discord API. No analytics service, no telemetry, no external database, no outbound webhook, no data broker.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Contact</h2>
+    </div>
+    <div class="card">
+      <p class="card-desc" style="margin-bottom:16px">
+        Data access requests, deletion requests, or any questions about a policy. Both channels are monitored.
+      </p>
+      <div class="card-actions">
+        <a href="mailto:hadtoberxr@gmail.com">hadtoberxr@gmail.com</a>
+        <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support server</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CoreLine Productions</span>
+    <nav class="footer-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://github.com/CoreLine-Productions" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
