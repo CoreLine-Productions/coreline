@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tixal Documentation · CoreLine Productions</title>
+<meta name="description" content="Documentation for Tixal, the ticket management bot by CoreLine Productions.">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coreline/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/coreline/">
+      <span class="brand-mark">CL</span>
+      <span class="brand-text">
+        <span class="brand-title">CoreLine</span>
+        <span class="brand-sub">Productions</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Tixal — Documentation</h2>
+      <p class="section-desc">Everything you need to configure Tixal, build panels, manage tickets, and understand the analytics.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Setup</h3>
+        </div>
+        <p class="card-desc">Install Tixal, set support and admin roles, wire log channels, and enable the pending workflow.</p>
+        <div class="card-actions">
+          <a href="/coreline/bots/tixal/">Status</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Panels &amp; buttons</h3>
+        </div>
+        <p class="card-desc">Create panels with the editor, add buttons, and configure the modal each button asks before a ticket is opened.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Ticket actions</h3>
+        </div>
+        <p class="card-desc">Claim, unclaim, lock, unlock, close, transcript, priority, notes, user info, and rename — every control the ticket embed exposes.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Moderation</h3>
+        </div>
+        <p class="card-desc">Blacklist management, temporary blacklist, blacklist history, and permanent staff notes attached to users.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Analytics</h3>
+        </div>
+        <p class="card-desc">Staff statistics, leaderboards, server analytics, staff reports, oldest open tickets, and the button-type breakdown.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Reskin</h3>
+        </div>
+        <p class="card-desc">Per-guild nickname, avatar, and banner. Name Style values are stored locally because Discord refuses bot writes to those fields.</p>
+      </article>
+
+    </div>
+
+    <div class="section-head" style="margin-top:48px">
+      <h2 class="section-title">Reference</h2>
+      <p class="section-desc">Every command, grouped by purpose.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Commands</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Panels</td>
+            <td><code>/setup</code>, <code>/editpanel</code>, <code>/deletepanel</code>, <code>/panels</code>, <code>/panelresend</code>, <code>/panelreorder</code>, <code>/cancelsetup</code></td>
+          </tr>
+          <tr>
+            <td>Configuration</td>
+            <td><code>/supportrole</code>, <code>/ticketadmin</code>, <code>/privatebuttonrole</code>, <code>/logs</code>, <code>/transcriptchannel</code>, <code>/pendingchannel</code>, <code>/pendingtoggle</code>, <code>/autoclose</code>, <code>/autoclosetoggle</code>, <code>/ticketlimit</code>, <code>/createlogs</code></td>
+          </tr>
+          <tr>
+            <td>Ticket actions</td>
+            <td><code>/claim</code>, <code>/unclaim</code>, <code>/close</code>, <code>/adduser</code>, <code>/removeuser</code>, <code>/addrole</code>, <code>/removerole</code></td>
+          </tr>
+          <tr>
+            <td>Moderation</td>
+            <td><code>/ticketblacklist</code>, <code>/temporaryblacklist</code>, <code>/blacklisthistory</code>, <code>/ticketnote</code></td>
+          </tr>
+          <tr>
+            <td>Tracking</td>
+            <td><code>/mytickets</code>, <code>/ticketstats</code>, <code>/ticketleaderboard</code>, <code>/ticketanalytics</code>, <code>/staffreport</code>, <code>/toptickets</code>, <code>/inactive</code></td>
+          </tr>
+          <tr>
+            <td>Ratings</td>
+            <td><code>/rating</code>, <code>/ratinglogchannel</code>, <code>/averagerating</code></td>
+          </tr>
+          <tr>
+            <td>Operations</td>
+            <td><code>/purge</code>, <code>/announce</code>, <code>/reminder</code></td>
+          </tr>
+          <tr>
+            <td>Reskin &amp; utilities</td>
+            <td><code>/reskin</code>, <code>/help</code>, <code>/privacy</code>, <code>/ping</code>, <code>/status</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-faint" style="font-size:13px;margin-top:16px">
+      Full command descriptions and usage notes are being written. In the meantime, <code>/help</code> inside Discord opens an interactive reference.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CoreLine Productions</span>
+    <nav class="footer-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://github.com/CoreLine-Productions" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
