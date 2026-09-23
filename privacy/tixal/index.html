@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tixal Privacy Policy · CoreLine Productions</title>
+<meta name="description" content="Privacy policy for Tixal — what the bot stores, why, and how it can be removed.">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coreline/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/coreline/">
+      <span class="brand-mark">CL</span>
+      <span class="brand-text">
+        <span class="brand-title">CoreLine</span>
+        <span class="brand-sub">Productions</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/" class="active">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container section">
+    <article class="prose">
+
+      <h1>Privacy Policy — Tixal</h1>
+      <p class="updated"><strong>Last updated:</strong> 2026-09-15</p>
+
+      <p>Tixal is a Discord bot operated by Coreline Productions. Tixal provides a ticket management system for Discord servers — panels, private ticket channels, staff claims, transcripts, ratings, staff statistics, blacklists, notes, and reminders. This policy explains what data Tixal stores, why, and how it can be removed.</p>
+
+      <h2>1. What Tixal Stores</h2>
+      <p>Tixal stores only the data required to run its ticket system. Nothing else.</p>
+      <p><strong>Ticket metadata</strong> — For every ticket opened, Tixal records the ticket channel ID, the opener's Discord user ID, the open timestamp, the close timestamp, the current priority level, internal staff notes attached to the ticket, and the full claim history (who claimed, when, and who unclaimed).</p>
+      <p><strong>Discord user IDs</strong> — Tixal stores the Discord user IDs of anyone who opens a ticket, claims a ticket, is added to a ticket, interacts with ticket controls, or is mentioned inside a ticket's metadata (staff notes, blacklist entries, rating submissions).</p>
+      <p><strong>Staff statistics</strong> — Per staff member, per guild: tickets claimed, tickets closed, tickets opened, and the list of ratings received (each rating is a 1-to-5 score tied to a ticket and a staff user ID).</p>
+      <p><strong>Blacklist entries</strong> — Users or roles that admins have blacklisted from opening tickets. Each entry records the target ID, whether it is a user or a role, the reason text if one was provided, the timestamp, the blacklisting admin's ID, and — for temporary blacklists — the expiry timestamp. Blacklist history is kept per target.</p>
+      <p><strong>Panel configurations</strong> — Every panel an admin creates: title, description, image URL, thumbnail URL, footer text, embed color, and the list of buttons on that panel. Each button stores its label, emoji, style, the modal question it asks, the target support role, and any per-button embed override.</p>
+      <p><strong>Per-user staff notes</strong> — Permanent notes attached to a user ID by staff, including the note text, author user ID, and timestamp. These are shown to staff when the noted user opens a new ticket.</p>
+      <p><strong>Reminders</strong> — Reminders set on a ticket, including the target duration, the staff member who set it, and the ticket it is attached to.</p>
+      <p><strong>Guild configuration</strong> — Support role IDs, admin role IDs, audit log channel ID, transcript log channel ID, rating channel ID, auto-close on/off state, auto-close duration, per-user ticket limits, and per-user creation cooldowns.</p>
+      <p><strong>Transcripts</strong> — When a ticket is closed, Tixal generates an HTML transcript of the channel's messages and uploads it as a file attachment to the configured transcript log channel. Tixal does not store the transcript on its own servers. The file lives only as a Discord attachment.</p>
+      <p>No message content is stored outside of ticket transcripts, which are generated on close and immediately uploaded to Discord.</p>
+
+      <h2>2. What Tixal Does Not Store</h2>
+      <ul>
+        <li>General message content from any channel outside of ticket transcripts</li>
+        <li>Presence, activity, or status data</li>
+        <li>Direct messages</li>
+        <li>Voice data</li>
+        <li>Email addresses, IP addresses, or any data collected outside Discord</li>
+        <li>User avatars, usernames, or profile data beyond what Discord sends with the interactions Tixal responds to</li>
+      </ul>
+
+      <h2>3. Message Content</h2>
+      <p>Tixal is slash-command and component driven. It does not receive the <code>MessageContent</code> intent and does not read messages in normal channels.</p>
+      <p>The single exception is ticket channels. Inside a ticket channel, Tixal reads messages <strong>only at the moment the ticket is closed</strong>, to build the transcript. That read is one-shot: the messages are compiled into an HTML file and uploaded as a Discord attachment to the transcript log channel. Tixal does not retain the message content after the transcript is uploaded.</p>
+      <p>The text an administrator types into a slash-command modal — panel titles, button labels, ticket questions, blacklist reasons, staff notes — is stored because it is required to operate the feature the admin configured.</p>
+
+      <h2>4. Why Tixal Needs Each Permission</h2>
+      <p>Tixal is guild-scoped and only responds to members holding configured admin or support roles. It requests the following gateway intents:</p>
+      <ul>
+        <li><strong>Guilds</strong> — required to receive slash commands and interaction events, and to read guild channels and roles so they can be shown in dropdowns and used for permission checks.</li>
+        <li><strong>GuildMembers</strong> — required to resolve member roles for admin and support checks, and to apply roles when needed.</li>
+        <li><strong>GuildMessages</strong> — required to read messages inside a ticket channel at the moment the ticket is closed, so the transcript can be built.</li>
+        <li><strong>MessageContent</strong> — <strong>not requested</strong>. Tixal does not receive message content in any channel it is not actively transcribing at close time.</li>
+        <li><strong>Presence</strong> — <strong>not requested</strong>.</li>
+      </ul>
+      <p>The bot's Discord permission set is limited to:</p>
+      <ul>
+        <li><strong>View Channels</strong>, <strong>Send Messages</strong>, <strong>Embed Links</strong>, <strong>Read Message History</strong> — for panel rendering, ticket channels, and log channels</li>
+        <li><strong>Manage Channels</strong> — for creating, renaming, locking, unlocking, and deleting ticket channels</li>
+        <li><strong>Manage Roles</strong> — for permission overwrites on ticket channels</li>
+        <li><strong>Manage Messages</strong> — for editing ticket embeds and managing messages inside tickets</li>
+        <li><strong>Mention Everyone</strong> — only if a reminder fires and needs to ping a role</li>
+      </ul>
+      <p>Tixal does not request Administrator, Kick, Ban, or any moderation permission.</p>
+
+      <h2>5. Data Retention</h2>
+      <p>Ticket metadata, staff statistics, ratings, staff notes, blacklist entries, panel configurations, reminders, and guild configuration are retained until a server admin removes the bot or requests deletion.</p>
+      <p>Closed tickets retain their metadata — opener, claim history, priority, notes, close time — for staff statistics and reporting. The ticket channel itself is deleted on close.</p>
+      <p>Transcripts are retained by Discord, in the transcript log channel, according to that channel's own message retention. Tixal does not keep a copy.</p>
+      <p>Automatic pruning runs on any expired temporary blacklist entries. Nothing else is pruned automatically.</p>
+
+      <h2>6. Data Deletion</h2>
+      <p>Server administrators can delete data directly at any time:</p>
+      <ul>
+        <li><strong>Delete ticket metadata</strong> — close the ticket and purge it through the ticket management menu.</li>
+        <li><strong>Delete staff statistics</strong> — remove the bot and re-add it, or request a full wipe via the contact info below.</li>
+        <li><strong>Delete a rating</strong> — ratings are attached to tickets; deleting the associated ticket data removes the rating.</li>
+        <li><strong>Delete a blacklist entry</strong> — use the blacklist management menu in the admin panel.</li>
+        <li><strong>Delete staff notes</strong> — use the notes management menu.</li>
+        <li><strong>Delete a panel</strong> — use the panel editor.</li>
+        <li><strong>Delete a reminder</strong> — cancel it from the ticket.</li>
+      </ul>
+      <p>Full deletion requests are actioned within seven days. Contact:</p>
+      <p><strong>hadtoberxr@gmail.com</strong><br><strong><a href="https://discord.com/invite/vEcVsGmmBn">https://discord.com/invite/vEcVsGmmBn</a></strong></p>
+
+      <h2>7. Third Parties</h2>
+      <p>Tixal does not share data with any third party. It communicates only with the Discord API to receive interactions and respond to them. There is no analytics service, no telemetry, no external database, no outbound webhook, and no data broker involved.</p>
+
+      <h2>8. Children</h2>
+      <p>Tixal is intended for use in communities that comply with Discord's Terms of Service. It is not directed at children under 13.</p>
+
+      <h2>9. Changes</h2>
+      <p>This policy may be updated. The date at the top of this page reflects the last revision.</p>
+
+      <h2>10. Contact</h2>
+      <p>For questions, data access requests, or deletion requests, contact:</p>
+      <p><strong>hadtoberxr@gmail.com</strong><br><strong><a href="https://discord.com/invite/vEcVsGmmBn">https://discord.com/invite/vEcVsGmmBn</a></strong></p>
+
+      <hr>
+
+      <p class="text-faint" style="font-size:13px">© Coreline Productions</p>
+
+    </article>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CoreLine Productions</span>
+    <nav class="footer-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://github.com/CoreLine-Productions" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
