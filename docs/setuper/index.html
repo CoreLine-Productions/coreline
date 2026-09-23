@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Setuper Documentation · CoreLine Productions</title>
+<meta name="description" content="Documentation for Setuper, the server administration toolkit by CoreLine Productions.">
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/coreline/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/coreline/">
+      <span class="brand-mark">CL</span>
+      <span class="brand-text">
+        <span class="brand-title">CoreLine</span>
+        <span class="brand-sub">Productions</span>
+      </span>
+    </a>
+    <nav class="site-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://discord.com/invite/vEcVsGmmBn" target="_blank" rel="noopener">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container section">
+    <div class="section-head">
+      <h2 class="section-title">Setuper — Documentation</h2>
+      <p class="section-desc">Everything you need to bulk-manage channels and roles, snapshot a server, and apply layout templates.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Setup</h3>
+        </div>
+        <p class="card-desc">Install Setuper, choose a log channel, and confirm the required permissions before running your first bulk action.</p>
+        <div class="card-actions">
+          <a href="/coreline/bots/setuper/">Status</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Channels &amp; roles</h3>
+        </div>
+        <p class="card-desc">Bulk-create or delete channels and roles, move categories, and apply permission overwrites in a single pass.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Snapshots</h3>
+        </div>
+        <p class="card-desc">Capture a full JSON record of a guild's channels and roles, then review it before restoring anything from it.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Layout exports</h3>
+        </div>
+        <p class="card-desc">Export the current layout of a guild as a JSON file, for archiving or for applying to another server.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Permission templates</h3>
+        </div>
+        <p class="card-desc">Save custom permission templates with <code>/template</code> and reuse them across categories, channels, and roles.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-head">
+          <h3 class="card-title">Delete by ID</h3>
+        </div>
+        <p class="card-desc">Clean up a batch of channels or roles created in a single action, using the record Setuper kept when they were created.</p>
+      </article>
+
+    </div>
+
+    <div class="section-head" style="margin-top:48px">
+      <h2 class="section-title">Reference</h2>
+      <p class="section-desc">Every command Setuper exposes.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Group</th>
+            <th>Commands</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Configuration</td>
+            <td><code>/setlog</code>, <code>/clearlog</code></td>
+          </tr>
+          <tr>
+            <td>Channels</td>
+            <td>Bulk create, bulk delete, move category</td>
+          </tr>
+          <tr>
+            <td>Roles</td>
+            <td>Bulk create, bulk delete, apply permissions</td>
+          </tr>
+          <tr>
+            <td>Snapshots</td>
+            <td><code>/snapshot</code>, review, restore</td>
+          </tr>
+          <tr>
+            <td>Layout</td>
+            <td><code>/export</code>, <code>/template</code></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="text-faint" style="font-size:13px;margin-top:16px">
+      Full command descriptions and usage notes are being written. In the meantime, run <code>/help</code> inside Discord for a live reference.
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span>© 2026 CoreLine Productions</span>
+    <nav class="footer-nav">
+      <a href="/coreline/">Home</a>
+      <a href="/coreline/status/">Status</a>
+      <a href="/coreline/privacy/">Privacy</a>
+      <a href="/coreline/terms/">Terms</a>
+      <a href="https://github.com/CoreLine-Productions" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
